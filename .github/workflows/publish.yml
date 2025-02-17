@@ -2,10 +2,10 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 name: Generate Html und Publish
 
@@ -27,7 +27,7 @@ jobs:
           git config --global user.email "mechtel@iqb.hu-berlin.de"
           git config --global user.name "Martin Mechtel"
           git checkout gh-pages
-          git reset --hard master
+          git reset --hard main
       - name: Run html generation
         run: |
           npm ci
