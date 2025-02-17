@@ -1,0 +1,20 @@
+{
+  "name": "@iqb/responses",
+  "version": "3.3.3",
+  "author": "IQB - Institut zur Qualitätsentwicklung im Bildungswesen",
+  "license": "CC0 1.0",
+  "description": "Data interfaces for processing assessment data.",
+  "dependencies": {
+    "mathjs": "^12.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iqb-berlin/responses.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iqb-berlin/responses/issues"
+  },
+  "homepage": "https://github.com/iqb-berlin/responses#readme",
+  "main": "index.js",
+  "types": "index.d.ts"
+}
