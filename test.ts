@@ -2,19 +2,20 @@
 // options can be passed, e.g. {allErrors: true}
 import Ajv, { ValidateFunction } from 'ajv';
 import fs from 'fs';
+import { log, error } from "console";
 
 const ajv = new Ajv();
-const testCaseFolder = "./";
+const schemaFilename = process.argv[3];
+const testDataFolder = process.argv[4];
 
-describe(testCaseFolder, () => {
-  const schemaFileName = `${__dirname}/../response.schema.json`;
-  const schemaFileContent = fs.readFileSync(schemaFileName, 'utf8');
+describe(testDataFolder, () => {
+  const schemaFileContent = fs.readFileSync(schemaFilename, 'utf8');
   let compiledSchema: ValidateFunction<unknown> | null = ajv.compile(JSON.parse(schemaFileContent));
   test('schema valid as json file', () => {
     expect(compiledSchema).not.toBeNull();
   });
   describe('valid cases', () => {
-    const validFolder = `${__dirname}/${testCaseFolder}/test_valid`;
+    const validFolder = `${__dirname}/${testDataFolder}/test_valid`;
     if (compiledSchema && fs.existsSync(validFolder)) {
       fs.readdirSync(validFolder).forEach((file: string) => {
         const data = fs.readFileSync(`${validFolder}/${file}`, 'utf8');
@@ -26,7 +27,7 @@ describe(testCaseFolder, () => {
     }
   })
   describe('invalid cases', () => {
-    const invalidFolder = `${__dirname}/${testCaseFolder}/test_invalid`;
+    const invalidFolder = `${__dirname}/${testDataFolder}/test_invalid`;
     if (compiledSchema && fs.existsSync(invalidFolder)) {
       fs.readdirSync(invalidFolder).forEach((file: string) => {
         const data = fs.readFileSync(`${invalidFolder}/${file}`, 'utf8');

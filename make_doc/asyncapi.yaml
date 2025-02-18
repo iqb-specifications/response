@@ -18,4 +18,4 @@ channels:
 components:
   schemas:
     response:
-      $ref: './response.schema.json'
+      $ref: '../response.schema.json'
