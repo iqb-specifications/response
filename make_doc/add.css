@@ -10,7 +10,3 @@
 	display: none;
 	background-color: white;
 }
-
-.rounded.p-4.py-2.border.bg-gray-100.hidden {
-	display: block;
-}
