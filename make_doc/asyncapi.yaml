@@ -7,10 +7,7 @@ info:
     url: https://creativecommons.org/publicdomain/zero/1.0/
   version: " - click on schema id to expand"
   contact:
-    name: Institute for Educational Quality Improvement (IQB)
-    url: https://www.iqb.hu-berlin.de
-  externalDocs:
-    description: Home of iqb-specifications (German only)
+    name: Home of iqb-specifications (German only)
     url: https://iqb-specifications.github.io/
 channels:
   iqb_data_structures:
