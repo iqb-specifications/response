@@ -14,6 +14,11 @@ Read more:
 
 # Change log
 
+## 1.5
+
+* add status `CODE_SELECTION_PENDING`
+* add `codes` property for multiple codes to select from
+
 ## 1.4.0
 
 * Add status value: `INTENDED_INCOMPLETE`
