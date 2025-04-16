@@ -1,0 +1,17 @@
+{
+  "id": "M",
+  "status": "CODE_SELECTION_PENDING",
+  "value": "a very long answer",
+  "codes": [
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6,
+      "parameter": "Senckbeil"
+    }
+  ]
+}
