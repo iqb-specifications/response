@@ -1,14 +1,14 @@
 asyncapi: 2.5.0
 info:
-  title: Object specification "response" for assessment output
+  title: response
+  description: Object specification for assessment output
   license:
     name: CC0 1.0
     url: https://creativecommons.org/publicdomain/zero/1.0/
-  version: (see schema id for version)
+  version: " - click on schema id to expand"
   contact:
-    name: Institute for Educational Quality Improvement (IQB)
-    url: https://www.iqb.hu-berlin.de
-    email: iqb-tbadev@hu-berlin.de
+    name: Home of iqb-specifications (German only)
+    url: https://iqb-specifications.github.io/
 channels:
   iqb_data_structures:
     subscribe:
@@ -18,4 +18,4 @@ channels:
 components:
   schemas:
     response:
-      $ref: './response.schema.json'
+      $ref: '../response.schema.json'

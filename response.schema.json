@@ -12,8 +12,9 @@
     },
     "status": {
       "type": "string",
-      "enum": ["UNSET", "NOT_REACHED", "DISPLAYED", "PARTLY_DISPLAYED", "VALUE_CHANGED", "DERIVE_PENDING", "DERIVE_ERROR",
-        "NO_CODING", "INVALID", "CODING_INCOMPLETE", "CODING_ERROR", "CODE_SELECTION_PENDING", "CODING_COMPLETE"],
+      "enum": ["UNSET", "NOT_REACHED", "DISPLAYED", "VALUE_CHANGED", "DERIVE_ERROR", "CODING_COMPLETE",
+        "NO_CODING", "INVALID", "CODING_INCOMPLETE", "CODING_ERROR", "PARTLY_DISPLAYED",
+        "DERIVE_PENDING", "INTENDED_INCOMPLETE"],
       "description": "Status as stage in the workflow of creating and coding a variable's value"
     },
     "value": {

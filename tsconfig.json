@@ -11,8 +11,8 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "lib": ["es2016", "dom"],
-    "rootDir": "test"
+    "rootDir": "."
   },
-  "include": ["test"],
-  "exclude": ["node_modules", "dist","public"]
+  "include": ["*.interface.ts"],
+  "exclude": ["test.ts", "dist","public"]
 }
