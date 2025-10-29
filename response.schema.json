@@ -1,5 +1,5 @@
 {
-  "$id": "response@iqb-standard@1.5",
+  "$id": "response@iqb-standard@2.0",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Response",
   "description": "Data structure produced by verona players",
@@ -14,7 +14,7 @@
       "type": "string",
       "enum": ["UNSET", "NOT_REACHED", "DISPLAYED", "VALUE_CHANGED", "DERIVE_ERROR", "CODING_COMPLETE",
         "NO_CODING", "INVALID", "CODING_INCOMPLETE", "CODING_ERROR", "PARTLY_DISPLAYED",
-        "DERIVE_PENDING", "INTENDED_INCOMPLETE", "CODE_SELECTION_PENDING"],
+        "DERIVE_PENDING", "INTENDED_INCOMPLETE"],
       "description": "Status as stage in the workflow of creating and coding a variable's value"
     },
     "value": {
@@ -67,24 +67,6 @@
     "code": {
       "type": "integer",
       "description": "Code representing the category of the value after coding process."
-    },
-    "codes": {
-      "type": "array",
-      "description": "List of possible codes if status is CODE_SELECTION_PENDING.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "Code representing the category option."
-          },
-          "parameter": {
-            "type": "string",
-            "description": "Specifies the code to support the code selection."
-          }
-        },
-        "required": ["id"]
-      }
     },
     "score": {
       "type": "integer",
